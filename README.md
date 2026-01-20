@@ -1,4 +1,4 @@
-# 🐾 Pet Food Label Decoder
+#  Pet Food Label Decoder
 
 ## Objective
 
@@ -6,7 +6,7 @@ Design a simplified AI-based system that explains pet food labels in a clear, sa
 
 ---
 
-## 🔧 Workflow
+##  Workflow
 
 1. Accept ingredient list from user  
 2. Clean and split the input text  
@@ -16,7 +16,7 @@ Design a simplified AI-based system that explains pet food labels in a clear, sa
 
 ---
 
-## 📚 Ingredient Classification Logic
+## Ingredient Classification Logic
 
 ### Beneficial Ingredients
 Protein sources commonly used in pet foods such as chicken, fish, lamb, and egg.
@@ -32,5 +32,5 @@ Any ingredient not found in the predefined lists is labeled as “Unclear”.
 
 ---
 
-## 🧪 Example Input
+## Example Input
 
