@@ -34,5 +34,14 @@ Any ingredient not found in the predefined lists is labeled as “Unclear”.
 
 ## Example Input
 #### Enter pet species (dog/cat): cat
-#### Enter ingredient list (comma separated): Chicken meal, corn
+#### Enter ingredient list (comma separated): Chicken meal, soya
+
+---
+
+## Example Output
+#### Ingredient Categorization and Explanations:
+
+#### Beneficial Ingredients:
+  ##### - chicken
+#### Explanation: This ingredient is commonly used as a protein source in many pet foods.
 
