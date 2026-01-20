@@ -1,26 +1,36 @@
-# Objective: Design a simple, safe, and explainable system that helps pet parents understand pet food ingredient labels using rule-based classification and friendly explanations.
+# 🐾 Pet Food Label Decoder
 
-## Workflow
-#### 1.Input Parsing
--Accept ingredient list text
--Optional pet species (dog or cat)
-#### 2.Preprocessing
--Clean text
--Split ingredients by commas
--Normalize words (lowercase, trim spaces)
+## Objective
 
-#### 3.Rule-Based Classification Each ingredient is matched against predefined lists:
--Beneficial proteins
--Common fillers
--Additives / vague terms
--Unknown → labeled as unclear
+Design a simplified AI-based system that explains pet food labels in a clear, safe, and human-friendly way using rule-based logic.
 
-#### 4.Explanation Generator
--Uses a simple text generator function (mock LLM style)
--Produces short, human‑friendly explanations
+---
 
-#### 5.Output Builder Produces:
--Ingredient categorization
--Simple explanations
--General suitability note
--Safety disclaimer
+## 🔧 Workflow
+
+1. Accept ingredient list from user  
+2. Clean and split the input text  
+3. Classify each ingredient using predefined rules  
+4. Generate simple explanations  
+5. Display suitability note and safety disclaimer  
+
+---
+
+## 📚 Ingredient Classification Logic
+
+### Beneficial Ingredients
+Protein sources commonly used in pet foods such as chicken, fish, lamb, and egg.
+
+### Common Fillers
+Plant-based ingredients such as corn, wheat, soy, rice, and barley that provide energy and bulk.
+
+### Additives or Vague Terms
+Ingredients such as artificial flavor, natural flavor, color, and preservatives used mainly for taste, color, or shelf life.
+
+### Unclear Ingredients
+Any ingredient not found in the predefined lists is labeled as “Unclear”.
+
+---
+
+## 🧪 Example Input
+
