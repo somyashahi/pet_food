@@ -33,4 +33,7 @@ Any ingredient not found in the predefined lists is labeled as “Unclear”.
 ---
 
 ## Example Input
+Enter pet species (dog/cat): dog
+Enter ingredient list (comma separated):
+Ingredients: Chicken meal, corn, wheat, soy, artificial flavour
 
