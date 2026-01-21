@@ -1,0 +1,74 @@
+
+INGREDIENT_RULES = {
+    "chicken": "Beneficial",
+    "chicken meal": "Beneficial",
+    "fish": "Beneficial",
+    "lamb": "Beneficial",
+    "egg": "Beneficial",
+
+    "corn": "Filler",
+    "wheat": "Filler",
+    "soy": "Filler",
+    "rice": "Filler",
+    "barley": "Filler",
+
+    "artificial flavour": "Additive",
+    "artificial flavor": "Additive",
+    "natural flavor": "Additive",
+    "color": "Additive",
+    "preservative": "Additive"
+}
+
+
+CATEGORY_EXPLANATIONS = {
+    "Beneficial": "This ingredient is commonly used as a protein source in many pet foods.",
+    "Filler": "This ingredient is a plant-based carbohydrate often used for energy or bulk.",
+    "Additive": "This term usually refers to flavoring, coloring, or preservation.",
+    "Unclear": "This ingredient is not clearly identified in the basic ingredient lists."
+}
+
+
+def decode_label(text, species="dog"):
+
+    text = text.replace("Ingredients:", "").strip()
+    ingredients = [i.strip().lower() for i in text.split(",") if i.strip()]
+
+    categorized = {
+        "Beneficial": [],
+        "Filler": [],
+        "Additive": [],
+        "Unclear": []
+    }
+
+    for ing in ingredients:
+        category = INGREDIENT_RULES.get(ing, "Unclear")
+        categorized[category].append(ing)
+
+    return categorized
+
+
+print(" Pet Food Label Decoder")
+print("--------------------------------")
+
+
+species = input("Enter pet species (dog/cat): ").strip().lower()
+if species not in ["dog", "cat"]:
+    species = "dog"
+
+label = input("Enter ingredient list (comma separated): \n")
+result = decode_label(label, species)
+
+print("\n Ingredient Categorization and Explanations:\n")
+
+for category, items in result.items():
+    if items:
+        print(f"{category} Ingredients:")
+        for ing in items:
+            print(f"  - {ing}")
+        print(f"Explanation: {CATEGORY_EXPLANATIONS[category]}\n")
+
+print(" General Suitability Note:")
+print(f"Common in many adult {species} foods.\n")
+
+print(" Safety Disclaimer:")
+print("This information is for general understanding only and is not veterinary or nutritional advice.")
